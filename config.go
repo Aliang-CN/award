@@ -12,7 +12,6 @@ var Conf = struct {
 	Award struct {
 		StartTime string `toml:"startTime"`  // start time of prizes
 		EndTime string `toml:"endTime"`      // end time of prize delivery
-
 	}
 
 	// AwardMap store all prize categories and the initial number
@@ -20,14 +19,14 @@ var Conf = struct {
 
 	// Global redis config
 	Redis struct {
-		Ip string `toml:"ip""`  // redis-server ip
-		Port uint32 `toml:"port"`   // redis-server port
-		Network string `toml:"network"`  // network
+		Ip string `toml:"ip"`  							// redis-server ip
+		Port uint32 `toml:"port"`   					// redis-server port
+		Network string `toml:"network"`  				// network
 	}
 
 	// Global mysql config
 	Mysql struct {
-		Dsn string `toml:"Dsn"`  // mysql dsn
+		Dsn string `toml:"Dsn"`  						// mysql dsn
 	}
 }{}
 
