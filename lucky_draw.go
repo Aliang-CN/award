@@ -217,13 +217,13 @@ func RandomGetAwardBatch() (*AwardBatch, error) {
 // InitAwardPool initializes the award pool
 func InitAwardPool() error {
 
-	conn, err := GetConn()
+	conn, err := GetConn()													// 连接redis数据库
 	if err != nil {
 		fmt.Printf("get conn is nil , %v \n", err)
 		return err
 	}
 
-	defer conn.Close()
+	defer conn.Close()														// 关闭redis连接 defer是推迟执行
 
 	conn.Send("ZADD", getAwardInfoKey(), time.Now().Unix(), "A")
 	conn.Send("ZADD", getAwardInfoKey(), time.Now().Unix(), "B")

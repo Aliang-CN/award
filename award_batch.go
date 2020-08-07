@@ -17,7 +17,7 @@ type AwardBatch struct {
 
 }
 
-func (award *AwardBatch) GetName() string {
+func (award *AwardBatch) GetName() string {							//定义一个函数，用来获取AwardBatch的名字
 	return award.name
 }
 
